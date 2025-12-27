@@ -9,6 +9,18 @@ Enhance planning defense in SafeBench benchmarking by leveraging FlowMatching an
 - **Proaction**: Incorporates soft/hard braking based on scores.
 - **Workflow**: After RL learns normal driving, Flow Matching and SDF networks are trained. Flow Matching emphasizes trajectory control, while SDF handles sudden collision threats, improving planning defense.
 
+## ✨ Edited Files
+- **`safebench/agent/rl/FFM.py`**  
+  - Added Flow Matching functionality
+- **`safebench/agent/rl/sac_fm.py`**  
+  - Integrated Flow Matching  
+  - Added OOD evaluation on top of basic SAC.py
+- **`safebench/agent/config/sac_fm.yaml`**  
+  - Added YAML configuration for SAC + Flow Matching
+- **`safebench/gym_carla/envs/carla_env.py`**  
+  - Added human detection (previously only vehicles were detected)  
+  - Edited reward function
+
 ## 📅 Key milestone
 - **Sep 30:** Established CARLA and SafeBench environments on a remote server.
 - **Oct 10:** Set up a simulation pipeline to evaluate scenarios via recorded videos (offline rendering).
